@@ -13,7 +13,7 @@ const adminRouter = require("./router/admin-router");// for the admin route
 app.use(express.json())  //to handle the json data //inbuilt middleware
 //for tackling the cors policy
 const corsOption ={
-    origin: "http://localhost:5173",
+    origin: "https://techify-frontend-henna.vercel.app/",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 }
@@ -29,7 +29,7 @@ app.use("/api/admin", adminRouter);//let's define admin route
 
 app.use(errorMiddleware); //to check the error from the error-middleware>> it must be checked before the connection is made
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 connectDb().then(()=>{
     //listen such that the route can be used
     app.listen(PORT,()=>{
