@@ -13,7 +13,7 @@ const adminRouter = require("./router/admin-router");// for the admin route
 app.use(express.json())  //to handle the json data //inbuilt middleware
 //for tackling the cors policy
 const corsOption ={
-    origin: ["https://techify-frontend-henna.vercel.app/", "http://localhost:5173/"],
+    origin: ["https://personal-website-gamma-seven-55.vercel.app/", "http://localhost:5173/"],
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 }
