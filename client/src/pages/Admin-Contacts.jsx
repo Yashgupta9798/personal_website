@@ -26,7 +26,7 @@ export const AdminContacts = () => {
   //defining the function deleteContactById
   const deleteContactById = async(id) =>{
     try {
-        const response = await fetch(`http://localhost:5000/api/admin/contacts/delete/${id}`,{
+        const response = await fetch(`https://personal-website-v3dy.onrender.com/api/admin/contacts/delete/${id}`,{
             method:'DELETE',
             headers:{
                 Authorization: authorizationToken,

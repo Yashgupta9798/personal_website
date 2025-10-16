@@ -14,7 +14,7 @@ export const Service = () =>{
           amount: price,
         }
         try {
-          const response = await axios.post('http://localhost:5000/api/data/service/createOrder', data)
+          const response = await axios.post('https://personal-website-v3dy.onrender.com/api/data/service/createOrder', data)
         //   console.log(response.data)
           window.location.href = response.data.url
         } catch (error) {

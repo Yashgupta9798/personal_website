@@ -15,6 +15,7 @@ export const AuthProvider = ({children}) =>{
 
     //!for final hosting
     const API = import.meta.env.VITE_APP_URI_API;// for the hosting purpose
+    console.log("API: ", API)       
 
     const storeTokenInLS = (serverToken) =>{
         setToken(serverToken);
@@ -61,6 +62,7 @@ export const AuthProvider = ({children}) =>{
     //to fetch the data of services from the database
     const getServices = async () =>{
         try {
+            console.log("auth api: ", API);
             const response = await fetch(`${API}/api/data/service`,{
                 method: "GET",
             });
