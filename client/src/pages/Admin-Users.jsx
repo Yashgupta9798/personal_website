@@ -25,7 +25,7 @@ export const AdminUsers = () =>{
     //delete the user on delete button
     const deleteUser = async (id) =>{
         try {
-            const response = await fetch(`import.meta.env.VITE_APP_URI_API/api/admin/users/delete/${id}`,{
+            const response = await fetch(`${import.meta.env.VITE_APP_URI_API}/api/admin/users/delete/${id}`,{
                 method:"DELETE",
                 headers:{
                     Authorization: authorizationToken,//from the context api>>auth.jsx

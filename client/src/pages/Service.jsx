@@ -14,7 +14,7 @@ export const Service = () =>{
           amount: price,
         }
         try {
-          const response = await axios.post('import.meta.env.VITE_APP_URI_API/api/data/service/createOrder', data)
+          const response = await axios.post(`${import.meta.env.VITE_APP_URI_API}/api/data/service/createOrder`, data)
         //   console.log(response.data)
           window.location.href = response.data.url
         } catch (error) {

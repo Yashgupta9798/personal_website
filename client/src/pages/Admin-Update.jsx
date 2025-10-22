@@ -56,7 +56,7 @@ export const AdminUpdate = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `import.meta.env.VITE_APP_URI_API/api/admin/users/update/${params.id}`,
+        `${import.meta.env.VITE_APP_URI_API}/api/admin/users/update/${params.id}`,
         {
           method: "PATCH",
           headers: {
