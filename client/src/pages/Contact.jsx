@@ -14,7 +14,7 @@ export const Contact = () => {
 
   const [userData, setUserData] = useState(true);//initialized with true value
   const {user, API} = useAuth();//this user have all the data
-  if(userData && user){
+  if(userData && user){-
     setContact({
       username: user.username,
       email: user.email,

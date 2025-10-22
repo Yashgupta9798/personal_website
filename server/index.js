@@ -13,8 +13,8 @@ const adminRouter = require("./router/admin-router");// for the admin route
 app.use(express.json())  //to handle the json data //inbuilt middleware
 //for tackling the cors policy
 const corsOption ={
-    origin: "https://personal-website-lime-seven.vercel.app/",
-    methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+    origin: [process.env.CLIENTURL],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
     credentials: true,
 }
 app.use(cors(corsOption)); //let's tackel cors //also a middleware

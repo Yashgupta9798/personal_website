@@ -15,7 +15,7 @@ export const AuthProvider = ({children}) =>{
 
     //!for final hosting
     const API = import.meta.env.VITE_APP_URI_API;// for the hosting purpose
-    console.log("API: ", API)       
+    // console.log("API: ", API)       
 
     const storeTokenInLS = (serverToken) =>{
         setToken(serverToken);
@@ -31,10 +31,13 @@ export const AuthProvider = ({children}) =>{
         return localStorage.removeItem("token"); //also we will remove the token from the local storage
     }
 
+    // console.log("I am here")
+
     //JWT AUTHENTICATION --> to get the currently logged in data--> to display the name
     const userAuthentication = async ()=>{
         try {
             setIsLoading(true);
+            console.log("api: ", API)
             const response = await fetch(`${API}/api/auth/user`,
                 {
                     method: "GET",
