@@ -1,8 +1,8 @@
 import { Analytics } from "../components/Analytics";
 
 export const Home = () => {
-  const API = import.meta.env.VITE_APP_URI_API;
-  console.log("I am here at home: ", API)
+  // const API = import.meta.env.VITE_APP_URI_API;
+  // console.log("I am here at home: ", API)
   return (
     <>
       <main>
